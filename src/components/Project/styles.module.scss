@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,400;1,500&family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap");
+
+$title-font: "Space Grotesk", sans-serif;
+$subtitle-font: "Inter", sans-serif;
+$italic-font: "Playfair Display", serif;
+$blog-bg: #e9e6e4;
+$body-bg: #121418;
+$title-color: #121418;
+$subtitle-color: #161419;
+$border-color: #94918f;
+
+.project {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+    border-bottom: 1px solid $border-color;
+    cursor: pointer;
+    transition: all 50ms;
+    &:hover{
+        transform: scale(1.015);
+    }
+}
+
+.projectDescription {
+    font-size: 15px;
+    margin-top: 12px;
+    line-height: 1.4;
+    word-wrap: break-word;
+}
+
+.projectTitle{
+    font-size: 26px;
+    margin: 0;
+    font-family: $subtitle-font;
+    font-weight: 500;
+    line-height: 1.2;
+    margin: 0px;
+}
+
+.projectSubTitleItalic{
+    font-size: 16px;
+    margin-top: 0;
+    font-weight: 300;
+    font-family: $italic-font;
+}
+
+.projectImg {
+    max-height: 16vh;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    filter: grayscale(1);
+    padding: 15px 0px;
+}
+
+@media (max-width: 1324px){
+    .projectImg{
+        max-height: 18vh;
+    }
+}
+
+@media (max-width: 992px){
+    .projectDescription{
+        font-size: 16px;
+    }
+}

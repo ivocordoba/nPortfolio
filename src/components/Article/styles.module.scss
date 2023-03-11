@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,400;1,500&family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap");
+
+$title-font: "Space Grotesk", sans-serif;
+$subtitle-font: "Inter", sans-serif;
+$italic-font: "Playfair Display", serif;
+$blog-bg: #e9e6e4;
+$body-bg: #121418;
+$title-color: #121418;
+$subtitle-color: #161419;
+$border-color: #94918f;
+
+.articleHeader{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.articleNumber{
+    font-size: 48px;
+    font-family: "Space Grotesk", sans-serif;
+}
+
+.articleDescriptionContainer{
+    display: flex;
+    flex-direction: column;
+    padding-right: 10px;
+}
+
+.articleDate{
+    font-family: "Playfair Display", serif;
+}
+
+.articleTimeToRead{
+    font-family: "Playfair Display", serif;
+}
+
+.articleTitle{
+    margin: 0;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 26px;
+    font-weight: 600;
+    letter-spacing: -2px;
+}
+
+.articleDescription{
+    margin: 0;
+    max-width: 74%;
+    font-size: 16px;
+    margin-top: 12px;
+    line-height: 1.4;
+    word-wrap: break-word;
+}
+
+.seeArticle{
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+@media (max-width: 1332px) {
+    .articleTitle{
+        font-size: 22px;
+    }
+    .articleDescription{
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 992px) {
+    .articleContainer{
+        margin: 0 15px;
+    }
+    .article{
+        border-bottom: 1px solid $border-color;
+    }
+    .articleTitle{
+        font-size: 32px;
+    }
+    .articleNumber{
+        font-size: 50px;
+    }
+    .articleDescription{
+        font-size: 17px;
+    }
+
+  }
+
+@media(max-width: 688px){
+    .articleContainer{
+        margin: 0;
+    }
+}

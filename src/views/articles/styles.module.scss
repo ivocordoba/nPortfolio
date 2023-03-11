@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,400;1,500&family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap");
+
+$title-font: "Space Grotesk", sans-serif;
+$subtitle-font: "Inter", sans-serif;
+$italic-font: "Playfair Display", serif;
+$blog-bg: #e9e6e4;
+$body-bg: #121418;
+$title-color: #121418;
+$subtitle-color: #161419;
+$border-color: #94918f;
+
+.articlesContainer{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.articlesTitle{
+  font-size: 100px;
+  font-family: $title-font;
+  font-weight: 700;
+  letter-spacing: -5px;
+  line-height: 1;
+  margin-bottom: 6px;
+  margin-top: 0;
+  color: #b91f1f;
+}
+
+.articlesMain{
+  align-self: stretch;
+}
+
+.divider{
+    border-bottom: 1px solid $border-color;
+    width: 100%;
+    margin-bottom: 20px;
+}
+  
+.filterMenu{
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.filterOption{
+  font-family: $italic-font;
+  padding: 0px 20px;
+  border-right: 1px solid $border-color;
+  cursor: pointer;
+  position: relative;
+  &::after{
+    content: "";
+    position: absolute;
+    width: 78%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 18px;
+    background-color: black;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  &:hover{
+    &::after{
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+  }
+}
+
+.filterOptionSelected{
+  font-family: $title-font;
+  font-weight: 900;
+  padding: 0px 20px;
+  border-right: 1px solid $border-color;
+  cursor: pointer;
+  position: relative;
+  &::after{
+    content: "";
+    position: absolute;
+    width: 80%;
+    transform: scaleX(1);
+    height: 2px;
+    bottom: 0;
+    left: 18px;
+    background-color: black;
+  }
+}
+
+@media(max-width: 688px){
+  .articlesTitle{
+      font-size: 80px;
+  }
+  .filterOption{
+    &::after{
+      display: none;
+    }
+    &:hover{
+      &::after{
+        display: none;
+      }
+    }
+  }
+  .filterOptionSelected{
+    &::after{
+      display: none;
+    }
+    &:hover{
+      &::after{
+        display: none;
+      }
+    }
+  }
+}

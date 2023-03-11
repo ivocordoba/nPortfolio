@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,400;1,500&family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap");
+
+$title-font: "Space Grotesk", sans-serif;
+$subtitle-font: "Inter", sans-serif;
+$italic-font: "Playfair Display", serif;
+$blog-bg: #e9e6e4;
+$body-bg: #121418;
+$title-color: #121418;
+$subtitle-color: #161419;
+$border-color: #94918f;
+
+.navBarContainer{
+    display: none;
+    justify-content: space-evenly;
+    align-items: center;
+    position: fixed;
+    height: 78px;
+    width: 100%;
+    background-color: $blog-bg;
+    opacity: 1;
+    top: calc(100vh - 78px);
+    border-top: 2px solid black;
+}
+
+.navBarItem{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+    width: 52px;
+    height: 52px;
+    border-radius: 999px;
+    img{
+        width: 36px;
+        height: 36px;
+    }
+    &:hover{
+        transform: scale(1.4);
+    }
+}
+
+.navBarItemSelected{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    border-radius: 8px;
+    background-color: #cac6c2;
+    border: 1px solid black;
+    transform: scale(1.2);
+    img{
+        background-color: #cac6c2;
+        width: 36px;
+        height: 36px;
+    }
+}
+
+.divider{
+    font-size: 18px;
+    font-weight: 600;
+    transform: rotate(90deg);
+}
+
+.langContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 42px;
+    height: 42px;
+    border-left: 1px solid $border-color;
+    padding-left: 6%;
+    position: relative;
+    img{
+        object-fit: cover;
+        width: 42px;
+        height: 42px;
+        border-radius: 9999px;
+    }
+}
+
+.langSelecter{
+    display: flex;
+    align-items: center;
+    width: 180px;
+    height: 64px;
+    background-color: $blog-bg;
+    border-radius: 8px;
+    border: 2px solid black;
+    position: absolute;
+    bottom: 72px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    img{
+        margin-left: 12%;
+    }
+}
+
+@media (max-width:1064px){
+    .navBarContainer{
+        display: flex;
+    }
+}
+
+@media (max-width: 668px) {
+    .langSelecter{
+        width: 160px;
+        img{
+            margin-left: 10%;
+        }
+    }
+}

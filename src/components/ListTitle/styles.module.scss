@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,400;1,500&family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap");
+
+$title-font: "Space Grotesk", sans-serif;
+$subtitle-font: "Inter", sans-serif;
+$italic-font: "Playfair Display", serif;
+$blog-bg: #e9e6e4;
+$body-bg: #121418;
+$title-color: #121418;
+$subtitle-color: #161419;
+$border-color: #94918f;
+
+.listTitle{
+    position: relative;
+    font-size: 22px;
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 600;
+    line-height: 1.2;
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+    &::before{
+        content: '';
+        border-radius: 50%;
+        width: 12px;
+        height: 12px;
+        background-color: $subtitle-color;
+        margin-right: 12px;
+    }
+}

@@ -1,0 +1,269 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,400;1,500&family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap");
+
+$title-font: "Space Grotesk", sans-serif;
+$subtitle-font: "Inter", sans-serif;
+$italic-font: "Playfair Display", serif;
+$blog-bg: #e9e6e4;
+$body-bg: #121418;
+$title-color: #121418;
+$subtitle-color: #161419;
+$border-color: #94918f;
+$text: #2B3044;
+$line: #BBC1E1;
+$line-active: #275EFE;
+
+.resumeContainer{
+    width: 100%;
+    min-height: 100vh;
+    margin-top: 10px;
+    border-top: 1px solid $border-color;
+    display: flex;
+}
+
+.titleResume{
+    font-size: 100px;
+    font-family: $title-font;
+    font-weight: 700;
+    letter-spacing: -5px;
+    line-height: 1;
+    margin-bottom: 6px;
+    margin-top: 10px;
+
+}
+
+.pResume{
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2;
+    font-family: $subtitle-font;
+    span {
+        font-family: $italic-font;
+    }
+}
+
+.fstResume{
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+}
+
+.resumeHeader{
+    border-bottom: 1px solid $border-color;
+}
+
+.webSkillsContainer{
+    border-bottom: 1px solid $border-color;
+}
+
+.webSkills{
+    margin: 25px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+}
+
+.webSkill{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 35px;
+}
+
+.webSkillTitle{
+    margin: 0;
+    margin-top: 10px;
+}
+
+.generalSkillsContainer{
+    border-bottom: 1px solid $border-color;
+}
+
+.generalSkills{
+    margin: 25px 0px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.educationGrid{
+    display: flex;
+    justify-content: space-between;
+}
+
+.educationItemF{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    div {
+        font-size: 28px;
+        font-family: $title-font;
+    }
+    span{
+        font-size: 18px;
+        margin-bottom: 2px;
+        font-family: "Playfair Display", serif;
+    }
+}
+
+.educationItem{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    border-left: 1px solid $border-color;
+    div {
+        font-size: 28px;
+        font-family: $title-font;
+    }
+    span{
+        font-size: 18px;
+        margin-bottom: 2px;
+        font-family: "Playfair Display", serif;
+    }
+}
+
+.sndResume{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-left: 1px solid $border-color;
+    margin-left: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 35%;
+}
+
+.generalSndContainer{
+    display: flex;
+    flex-direction: column;
+    margin: 0px 15px;
+    height: 30%;
+    width: 100%;
+    border-bottom: 1px solid $border-color;
+    div {
+        font-size: 48px;
+        font-family: $title-font;
+    }
+    span{
+        font-size: 24px;
+        margin-bottom: 2px;
+        margin-left: 34px;
+        font-family: "Playfair Display", serif;
+    }
+}
+
+.generalSndContainerL{
+    display: flex;
+    flex-direction: column;
+    margin: 0px 15px;
+    height: 30%;
+    width: 100%;
+    div {
+        font-size: 36px;
+        font-family: $title-font;
+    }
+    span{
+        font-size: 20px;
+        margin-bottom: 2px;
+        margin-left: 34px;
+        font-family: "Playfair Display", serif;
+    }
+}
+
+.downloadButton{
+    font-size: 20px;
+    font-weight: 600;
+    border: 2px dashed black;
+    border-radius: 14px;
+    width: 60%;
+    height: 82px;
+    align-self: center;
+    margin-top: auto;
+    margin-bottom: auto;
+    cursor: pointer;
+}
+
+@media (max-width: 1312px){
+    .educationGrid{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .educationContainer{
+        width: 100%;
+        margin: 0 15px 15px;
+        div{
+            font-size: 48px;
+        }
+        span{
+            font-size: 18px;
+            margin-bottom: 2px;
+            margin-left: 34px;
+            font-family: "Playfair Display", serif;
+        }
+    }
+    .educationItem{
+        border-left: none;
+        align-items: flex-start;
+        margin-top: 10px;
+        width: 100%;
+        div{
+            font-size: 36px;
+        }
+    }
+    .educationItemF{
+        align-items: flex-start;
+        margin-top: 10px;
+        width: 100%;
+        div{
+            font-size: 36px;
+        }
+    }
+    .generalSndContainerL{
+        border-top: 1px solid $border-color;
+    }
+    .generalSndContainer{
+        display: flex;
+        height: 30%;
+        width: 100%;
+        border: none;
+        margin-left: 0;
+        div {
+            font-size: 32px;
+            font-family: $title-font;
+        }
+        span{
+            font-size: 20px;
+            margin-left: 34px;
+            font-family: "Playfair Display", serif;
+        }
+    }
+}
+
+@media (max-width: 992px){
+    .resumeContainer{
+        flex-direction: column;
+    }
+    .fstResume{
+        width: 100%;
+    }
+    .sndResume{
+        width: 100%;
+        margin-left: 0;
+        border-left: none;
+        border-top: 1px solid $border-color;
+    }
+    .educationContainer{
+        margin: 0 0 20px 0;
+    }
+    .generalSndContainerL{
+        margin-left: 0;
+    }
+    .downloadButton{
+        margin: 28px 0;
+    }
+}

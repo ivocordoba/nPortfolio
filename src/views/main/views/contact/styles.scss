@@ -1,0 +1,240 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,400;1,500&family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap");
+
+$title-font: "Space Grotesk", sans-serif;
+$subtitle-font: "Inter", sans-serif;
+$italic-font: "Playfair Display", serif;
+$blog-bg: #e9e6e4;
+$body-bg: #121418;
+$title-color: #121418;
+$subtitle-color: #161419;
+$border-color: #94918f;
+
+.contactContainer{
+    width: 100%;
+    min-height: 100vh;
+    margin-top: 10px;
+    border-top: 1px solid $border-color;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contactTitle{
+    font-size: 164px;
+    font-family: $title-font;
+    font-weight: 700;
+    letter-spacing: -5px;
+    line-height: 1;
+    margin-bottom: 6px;
+    margin-top: 0;
+    color: #b91f1f;
+}
+
+.contactP{
+    width: 58%;
+    font-family: $subtitle-font;
+    color: $subtitle-color;
+    font-weight: 600;
+    letter-spacing: 1;
+    line-height: 1.5;
+    font-size: 20px;
+    margin: 0;
+}
+
+.formContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+}
+
+.formInputs{
+    display: flex;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.formFst{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    height: 100%;
+    
+}
+
+.formTitles{
+    font-size: 32px;
+    min-height: 5vh;
+    font-family: $title-font;
+    margin: 0;
+}
+
+.formItem{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 15px 5px;
+}
+
+
+.formScd{
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+    height: 100%;
+    margin-left: 10px;
+    border-left: 1px solid $border-color;
+    h5{
+        margin-left: 10px;
+    }
+    p{
+        margin: 0;
+        margin-left: 10px;
+    }
+}
+
+.Toastify__toast--success {
+    background:  $blog-bg !important;
+    color: $subtitle-color;
+    font-family: $title-font;
+    margin-bottom: 0px;
+}
+
+@media (max-width: 1312px){
+    .contactTitle{
+        font-size: 142px;
+    }
+    .contactP{
+        width: 70%;
+        font-size: 18px;
+    }
+    .formContainer{
+        width: 72%;
+    }
+}
+
+@media (max-width: 992px){
+    .contactContainer{
+        justify-content: flex-start;
+        min-height: 80vh;
+    }
+    .contactTitle{
+        font-size: 100px;
+        margin-top: 10vh;
+    }
+    .contactP{
+        font-size: 16px;
+        width: 68%;
+    }
+    .formContainer{
+        width: 78%;
+        flex-direction: column;
+    }
+    .formFst{
+        width: 100%;
+    }
+    .formScd{
+        width: 100%;
+        margin-left: 0px;
+        h5{
+            margin-left: 0;
+        }
+        p{
+            margin-left: 0;
+        }
+    }
+    .contactButton{
+        right: 0% !important;
+    }
+}
+
+@media (max-width: 762px){
+    .contactTitle{
+        font-size: 96px;
+    }
+    .formInputs{
+        flex-direction: column;
+    }
+    .formItem{
+        margin: 15px 0px;
+    }
+    .formScd{
+        border-left: 0 !important;
+        span{
+            margin-left: 0;
+        }
+    }
+}
+
+@media (max-width: 688px){
+    .contactTitle{
+        font-size: 66px;
+        padding-right: 12px;
+    }
+    .contactP{
+        width: 100%;
+        font-size: 14px;
+    }
+    .formContainer{
+        width: 100%;
+    }
+}
+
+.contactButton {
+    position: relative;
+    width: 300px;
+    padding: 16px;
+    border: none;
+    border-bottom: 5px solid #700c0c;
+    border-radius: 8px;
+    background: #b91f1f;
+    color: white;
+    font-size: 2.4rem;
+    font-weight: bold;
+    font-family: $title-font;
+    text-shadow: 0 -1px 0 rgba(0,0,0,0.3);
+    outline: 3px solid rgb(0,0,0,0);
+    cursor: pointer;
+    transition-property: background, color;
+    transition-duration: 0.08s;
+    right: 8%;
+    &:hover {
+      background: #9b1b1b;
+      border-bottom-color: #5e0808;
+    }
+    &:active {
+      bottom: -3px;
+      border-bottom: 2px solid #5e0808;
+      background: #b91f1f;
+    }
+}
+
+.pru{
+    font-size: 15px;
+    margin: 0 0 0 0;
+}
+
+.loadingAnimation{
+    background-color: inherit;
+    &::after{
+        display: inline-block;
+        animation: dotty steps(1,end) 1.5s infinite;
+        content: '';
+    }
+}
+
+@keyframes dotty {
+    0%   { content: ''; }
+    25%  { content: '.'; }
+    50%  { content: '..'; }
+    75%  { content: '...'; }
+    100% { content: ''; }
+  }
+
+.toast{
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    user-select: none;          /* Likely future */      
+}

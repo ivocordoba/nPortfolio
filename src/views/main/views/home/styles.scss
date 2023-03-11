@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,400;1,500&family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap");
+
+$title-font: "Space Grotesk", sans-serif;
+$subtitle-font: "Inter", sans-serif;
+$italic-font: "Playfair Display", serif;
+$blog-bg: #e9e6e4;
+$body-bg: #121418;
+$title-color: #121418;
+$subtitle-color: #161419;
+$border-color: #94918f;
+
+a {
+    all: unset;
+}
+a {
+    text-decoration: none; /* no underline */
+}
+
+.containerH{
+    display: flex;
+}
+
+.firstContent{
+    width: 65%;
+}
+
+.secondContent{
+    border-left: 1px solid $border-color;
+    margin-left: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 35%;
+}
+
+.title{
+    font-size: 100px;
+    font-family: $title-font;
+    font-weight: 700;
+    letter-spacing: -5px;
+    line-height: 1;
+    margin-bottom: 6px;
+    margin-top: 0;
+}
+
+.subTitle{
+    font-size: 26px;
+    font-family: $subtitle-font;
+    font-weight: 500;
+    line-height: 1.2;
+    margin: 0px;
+}
+
+.subTitleItalic{
+    font-size: 26px;
+    font-weight: 300;
+    font-family: $italic-font;
+}
+
+.subTitleItalicS{
+    margin-top: 0;
+    font-size: 16px;
+    font-weight: 300;
+    font-family: $italic-font;
+}
+
+.header{
+    border-bottom: 1px solid $border-color;
+}
+
+.lastestProjectsContainer{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.lastestProjects{
+    display: flex;
+    flex-direction: column;
+}
+
+.aboutMeContainer{
+    display: flex;
+    flex-direction: column;
+    margin: 0px 15px;
+    border-bottom: 1px solid $border-color;
+    width: 100%;
+}
+
+.presentationP{
+    font-size: 20px;
+    margin-top: 18px;
+    line-height: 1.4;
+}
+
+.articleContainer{
+    display: flex;
+    flex-direction: column;
+    margin: 0px 15px;
+    width: 100%;
+}
+
+@media (max-width: 992px) {
+    .secondContent{
+        margin-top: 5px;
+    }
+    .aboutMeContainer{
+        margin: 0 0;
+        margin-top: 5px;
+    }
+    .articleContainer{
+        margin: 0 15px;
+    }
+
+  }
+
+@media(max-width: 688px){
+    .title{
+        font-size: 80px;
+    }
+    .containerH{
+        flex-direction: column;
+    }
+    .firstContent{
+        width: 96%;
+    }
+    .secondContent{
+        width: 96%;
+        border-left: none;
+        margin-left: 0;
+    }
+    .articleContainer{
+        margin: 0;
+    }
+}
